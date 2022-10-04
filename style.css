@@ -1,0 +1,180 @@
+*{
+  margin: 0px 0px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color: rgb(17, 17, 17);
+  margin: 0px 110px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(51, 51, 51);
+  min-height: 11vh;
+  bottom: 2px;
+  position: relative;
+}
+
+.nav_links{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 37%;
+}
+
+.nav_links a{
+  text-decoration: none;
+  color: rgb(230, 230, 230);
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+}
+
+.nav_links a:hover:after{
+  width: 100%;
+}
+
+.nav_links a:after{
+  content: "";
+  position: absolute;
+  background-color: rgb(233, 94, 94);
+  height: 2px;
+  width: 0%;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s;
+}
+
+.logo{
+  color: rgb(230, 230, 230);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 24px;
+}
+
+.BeCode{
+  color: rgb(233, 94, 94);
+}
+
+.img{
+  width: 100%;
+  height: 400px;
+}
+
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+.burger div{
+  width: 25px;
+  height: 2px;
+  background-color: rgb(230, 230, 230);
+  margin: 4px;
+}
+
+.btn{
+  background-color: #3d0826;
+  border: none;
+  border-radius: 400px;
+  padding: 12px 22px;
+  position: relative;
+  left: 140px;
+}
+
+.btn a{
+  color: rgb(230, 230, 230);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.container{
+  background-color: rgb(230, 230, 230);
+  height: 800px;
+}
+
+.video{
+  width: 670px;
+  height: 400px;
+  position: relative;
+  left: 40px;
+  top: 40px;
+  border: none;
+}
+
+main h2{
+  position: relative;
+  top: 44px;
+  left: 70px;
+  font-size: 20px;
+}
+
+main p{
+  position: relative;
+  top: 44px;
+  left: 70px;
+  font-size: 15px;
+}
+
+@media screen and (max-width:1024px){
+  .nav_links{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .video{
+    width: 85%;
+  }
+}
+
+
+@media screen and (max-width:768px){
+  .video{
+    width: 80%;
+    height: 35%;
+  }
+}
+
+@media screen and (max-width:768px){
+  main p, main h2{
+    width: 150px;
+  }
+}
+
+@media screen and (max-width:768px){
+  body{
+    overflow-x: hidden;
+  }
+  .nav_links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 7vh;
+    background-color: #7c5f70;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    transform: translateX(200%);
+    /*transition: transform 0.5s ease-in;*/
+  }
+  .nav_links li{
+  opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
